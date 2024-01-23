@@ -1,0 +1,40 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Registar Cidadão</title>
+    </head>
+    <body>
+
+        <h2>Registo de Nascimento</h2>
+        <form action="registerCitizen" method="post">
+
+            <pre>
+                NUIC: <input type="text" name="nuic"/>
+                Nome: <input type="text" name="firstName"/>
+                Apelido:  <input type="text" name="lastName"/>
+                Sexo:  <input type="text" name="sex"/>
+                Peso: <input type="text" name="weight"/>
+                Data de nascimento:  <input type="text" name="dob"/>
+
+                Província: <input type="text" name="province"/>
+                Distrito: <input type="text" name="district"/>
+                Localidade: <input type="text" name="village"/>
+
+                Nome do pai: <input type="text" name="father"/>
+                Nome da mãe: <input type="text" name="mother"/>
+
+                Conservatória de registo: <input type="text" name="registrConservatory"/>
+                Endereço: <input type="text" name="conservatoryAddress"/>
+                Estado do cidadão: <input type="text" name="citizenState"/>
+                Averbamentos: <input type="text" name="endorsment"/>
+                Descrição: <input type="text" name="descriptio"/>
+
+                <br />
+                <input type="submit" value="Registar"/>
+            </pre>
+        </form>
+
+    </body>
+</html>
