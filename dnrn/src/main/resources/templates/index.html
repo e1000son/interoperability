@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Registo do Cidadão</title>
+</head>
+<body>
+<h2>Login</h2>
+<br />
+<form action="login" method="post">
+  <pre>
+  Nome do utilizador:<input type="text" name="email"/>
+  Password:<input type="password" name="password"/>
+   <br />
+  <input type="submit" value="Login"/>
+  <p>Novo utilizador? <a href="/v1.0/dnrn/showReg">Registe-se aqui</a> </p>
+
+   <p th:text="${msg}">
+  </pre>
+</form>
+</body>
+</html>
