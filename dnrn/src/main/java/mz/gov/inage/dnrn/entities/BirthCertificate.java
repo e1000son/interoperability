@@ -8,7 +8,7 @@ import java.sql.Timestamp;
 public class BirthCertificate extends AbstractEntity{
     private String NUIC;
     @Column(name = "REGISTR_CONSERVAT")
-    private String ConservatoryOfRegistration;
+    private String conservatoryOfRegistration;
     @Column(name = " REGISTR_DATE")
     private Timestamp registeredDate;
     @Column(name = "STATE_CITIZEN")
@@ -17,12 +17,78 @@ public class BirthCertificate extends AbstractEntity{
     private String address;
     @Column(name = "DESCRIPTIO")
     private String description;
+    @OneToOne
+    private Citizen citizen;
+
+    public String getNUIC() {
+        return NUIC;
+    }
+
+    public void setNUIC(String NUIC) {
+        this.NUIC = NUIC;
+    }
+
+    public String getConservatoryOfRegistration() {
+        return conservatoryOfRegistration;
+    }
+
+    public void setConservatoryOfRegistration(String conservatoryOfRegistration) {
+        this.conservatoryOfRegistration = conservatoryOfRegistration;
+    }
+
+    public Timestamp getRegisteredDate() {
+        return registeredDate;
+    }
+
+    public void setRegisteredDate(Timestamp registeredDate) {
+        this.registeredDate = registeredDate;
+    }
+
+    public String getCitizenState() {
+        return citizenState;
+    }
+
+    public void setCitizenState(String citizenState) {
+        this.citizenState = citizenState;
+    }
+
+    public String getEndorsment() {
+        return endorsment;
+    }
+
+    public void setEndorsment(String endorsment) {
+        this.endorsment = endorsment;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Citizen getCitizen() {
+        return citizen;
+    }
+
+    public void setCitizen(Citizen citizen) {
+        this.citizen = citizen;
+    }
 
     @Override
     public String toString() {
         return "BirthCertificate{" +
                 "NUIC='" + NUIC + '\'' +
-                ", ConservatoryOfRegistration='" + ConservatoryOfRegistration + '\'' +
+                ", ConservatoryOfRegistration='" + conservatoryOfRegistration + '\'' +
                 ", registeredDate=" + registeredDate +
                 ", citizenState='" + citizenState + '\'' +
                 ", endorsment='" + endorsment + '\'' +
