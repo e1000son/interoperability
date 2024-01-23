@@ -22,7 +22,7 @@ public class BirthCertificateController {
                 "Certificado (ID = " + birthCertificate.getId() + ")" +
                         " do cidadão " + birthCertificate.getCitizen().getFirstName() + " " +
                         birthCertificate.getCitizen().getLastName() + " (NUIC = " +
-                        birthCertificate.getNUIC() +
+                        birthCertificate.getNuic() +
                         ") criado com sucesso.");
 
         return "/citizen/certificateConfirmation";

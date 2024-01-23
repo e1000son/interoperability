@@ -6,7 +6,7 @@ import java.sql.Timestamp;
 
 @Entity
 public class BirthCertificate extends AbstractEntity{
-    private String NUIC;
+    private String nuic;
     @Column(name = "REGISTR_CONSERVAT")
     private String conservatoryOfRegistration;
     @Column(name = " REGISTR_DATE")
@@ -20,12 +20,12 @@ public class BirthCertificate extends AbstractEntity{
     @OneToOne
     private Citizen citizen;
 
-    public String getNUIC() {
-        return NUIC;
+    public String getNuic() {
+        return nuic;
     }
 
-    public void setNUIC(String NUIC) {
-        this.NUIC = NUIC;
+    public void setNuic(String nuic) {
+        this.nuic = nuic;
     }
 
     public String getConservatoryOfRegistration() {
@@ -87,7 +87,7 @@ public class BirthCertificate extends AbstractEntity{
     @Override
     public String toString() {
         return "BirthCertificate{" +
-                "NUIC='" + NUIC + '\'' +
+                "NUIC='" + nuic + '\'' +
                 ", ConservatoryOfRegistration='" + conservatoryOfRegistration + '\'' +
                 ", registeredDate=" + registeredDate +
                 ", citizenState='" + citizenState + '\'' +
