@@ -23,7 +23,7 @@ public class BirthCertificateServiceImpl implements IBirthCertificateService{
         Citizen savedCitizen = citizenRepository.save(citizen);
 
         BirthCertificate birthCertificate = new BirthCertificate();
-        birthCertificate.setNUIC(certificateRequest.getNuic());
+        birthCertificate.setNuic(certificateRequest.getNuic());
         birthCertificate.setConservatoryOfRegistration(certificateRequest.getRegistrConservatory());
         birthCertificate.setRegisteredDate(new Timestamp(new Date().getTime()));
         birthCertificate.setCitizenState(certificateRequest.getCitizenState());
