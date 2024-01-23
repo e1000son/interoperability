@@ -3,7 +3,7 @@ target/
 !gpj-auth-service/.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-dnrn_db.sql
+dnrn_x_road_db.sql
 
 ### STS ###
 .apt_generated
