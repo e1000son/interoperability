@@ -27,6 +27,7 @@ public class BirthCertificateServiceImpl implements IBirthCertificateService{
         birthCertificate.setConservatoryOfRegistration(certificateRequest.getRegistrConservatory());
         birthCertificate.setRegisteredDate(new Timestamp(new Date().getTime()));
         birthCertificate.setCitizenState(certificateRequest.getCitizenState());
+        birthCertificate.setEndorsment(certificateRequest.getEndorsment());
         birthCertificate.setAddress(certificateRequest.getConservatoryAddress());
         birthCertificate.setDescription(certificateRequest.getDescriptio());
         birthCertificate.setCitizen(savedCitizen);
