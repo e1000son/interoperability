@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Detalhes do cidadão</title>
+</head>
+<body>
+<h2>Detalhes do cidadão</h2>
+
+Nome: <span th:text="${certificate.citizen.firstName}"/> <br/>
+NUIC: <span th:text="${certificate.nuic}"/> <br/>
+Apelido:  <span th:text="${certificate.citizen.lastName}"/><br/>
+Sexo:  <span th:text="${certificate.citizen.sex}"/><br/>
+Data de nascimento:  <span th:text="${certificate.citizen.dob}"/><br/>
+Local de nascimento:  <span th:text="${certificate.citizen.province}"/><br/>
+Nome do pai: <span th:text="${certificate.citizen.fathersName}"/> <br/>
+Nome da mãe:  <span th:text="${certificate.citizen.mothersName}"/><br/>
+
+<h2>Detalhes da Conservatória de registo</h2>
+Designação: <span th:text="${certificate.conservatoryOfRegistration}"/> <br/>
+Endereço: <span th:text="${certificate.address}"/> <br/>
+Data de registo: <span th:text="${certificate.registeredDate}"/> <br/>
+Averbamentos: <span th:text="${certificate.endorsment}"/> <br/>
+
+<form action="completeCheckin" method="post"/>
+    <pre>
+
+    <h2>Dados do Bilhete de Identidade</h2>
+    Local de emissão: <input type="text" name="numberOfBags"/>
+
+    <input type="hidden" name="certificateId" th:value="${certificate.id}"/>
+    <input type="submit" value="Gerar Bilhete de Identidade"/>
+    </pre>
+</form>
+</body>
+</html>
