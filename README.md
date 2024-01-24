@@ -4,7 +4,7 @@ Simple simulating an interoperability process between DNIC (from Ministry of Int
 
 # Requirements
 
-- Java >= 19 (OpenJDK JVM is tested by our CI on Travis)
+- Java >= 17 (OpenJDK JVM is tested by our CI on Travis)
 - MySql 8
 - Spring Boot
 
