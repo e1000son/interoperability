@@ -12,7 +12,7 @@ public class CertificateRestController {
     @Autowired
     IBirthCertificateRepository certificateRepository;
 
-    @RequestMapping("/cidadao/certificado/{nuic}")
+    @RequestMapping("/cidadao/certidao/{nuic}")
     public BirthCertificate getBirthCertifcate(@PathVariable("nuic") String nuic){
         return certificateRepository.findCertificateByNuic(nuic);
     }
