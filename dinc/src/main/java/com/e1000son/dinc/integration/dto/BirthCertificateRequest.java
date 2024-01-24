@@ -1,20 +1,22 @@
 package com.e1000son.dinc.integration.dto;
 
-
-public class CitizenCertificateRequest {
+public class BirthCertificateRequest {
     private Long id;
     private String nuic;
     private String firstName;
     private String lastName;
     private String sex;
-//    private Date dob;
-    private String father;
-    private String mother;
-    private String state;
     private Integer weight;
+    //private Date dob;
     private String province;
     private String district;
     private String village;
+    private String father;
+    private String mother;
+    private String registrConservatory;
+    private String conservatoryAddress;
+    private String citizenState;
+    private String endorsment;
     private String descriptio;
 
     public Long getId() {
@@ -57,38 +59,6 @@ public class CitizenCertificateRequest {
         this.sex = sex;
     }
 
-//    public Date getDob() {
-//        return dob;
-//    }
-//
-//    public void setDob(Date dob) {
-//        this.dob = dob;
-//    }
-
-    public String getFather() {
-        return father;
-    }
-
-    public void setFather(String father) {
-        this.father = father;
-    }
-
-    public String getMother() {
-        return mother;
-    }
-
-    public void setMother(String mother) {
-        this.mother = mother;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
     public Integer getWeight() {
         return weight;
     }
@@ -96,6 +66,14 @@ public class CitizenCertificateRequest {
     public void setWeight(Integer weight) {
         this.weight = weight;
     }
+
+//    public Date getDob() {
+//        return dob;
+//    }
+//
+//    public void setDob(Date dob) {
+//        this.dob = dob;
+//    }
 
     public String getProvince() {
         return province;
@@ -121,30 +99,59 @@ public class CitizenCertificateRequest {
         this.village = village;
     }
 
+    public String getFather() {
+        return father;
+    }
+
+    public void setFather(String father) {
+        this.father = father;
+    }
+
+    public String getMother() {
+        return mother;
+    }
+
+    public void setMother(String mother) {
+        this.mother = mother;
+    }
+
+    public String getRegistrConservatory() {
+        return registrConservatory;
+    }
+
+    public void setRegistrConservatory(String registrConservatory) {
+        this.registrConservatory = registrConservatory;
+    }
+
+    public String getConservatoryAddress() {
+        return conservatoryAddress;
+    }
+
+    public void setConservatoryAddress(String conservatoryAddress) {
+        this.conservatoryAddress = conservatoryAddress;
+    }
+
+    public String getCitizenState() {
+        return citizenState;
+    }
+
+    public void setCitizenState(String citizenState) {
+        this.citizenState = citizenState;
+    }
+
+    public String getEndorsment() {
+        return endorsment;
+    }
+
+    public void setEndorsment(String endorsment) {
+        this.endorsment = endorsment;
+    }
+
     public String getDescriptio() {
         return descriptio;
     }
 
     public void setDescriptio(String descriptio) {
         this.descriptio = descriptio;
-    }
-
-    @Override
-    public String toString() {
-        return "CitizenCertificateRequest{" +
-                "id=" + id +
-                ", nuic='" + nuic + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", sex='" + sex + '\'' +
-                ", father='" + father + '\'' +
-                ", mother='" + mother + '\'' +
-                ", state='" + state + '\'' +
-                ", weight=" + weight +
-                ", province='" + province + '\'' +
-                ", district='" + district + '\'' +
-                ", village='" + village + '\'' +
-                ", descriptio='" + descriptio + '\'' +
-                '}';
     }
 }
