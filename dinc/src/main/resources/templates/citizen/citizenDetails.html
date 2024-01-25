@@ -24,11 +24,12 @@ Endereço: <span th:text="${certificate.address}"/> <br/>
 Data de registo: <span th:text="${certificate.registeredDate}"/> <br/>
 Averbamentos: <span th:text="${certificate.endorsment}"/> <br/>
 
-<form action="completeCheckin" method="post"/>
-    <pre>
+<form action="generateIdCard" method="post"/>
+<pre>
 
     <h2>Dados do Bilhete de Identidade</h2>
-    Local de emissão: <input type="text" name="numberOfBags"/>
+    Local de emissão: <input type="text" name="placeEmission"/>
+    Estado civil: <input type="text" name="maritalStatus"/>
 
     <input type="hidden" name="certificateId" th:value="${certificate.id}"/>
     <input type="submit" value="Gerar Bilhete de Identidade"/>

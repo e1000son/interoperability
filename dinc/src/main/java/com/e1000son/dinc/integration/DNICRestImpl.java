@@ -14,4 +14,14 @@ public class DNICRestImpl implements IDNICRestClient{
                 BirthCertificate.class);
         return birthCertificate;
     }
+
+    @Override
+    public BirthCertificate findCitizenById(Long id) {
+        RestTemplate restTemplate = new RestTemplate();
+        BirthCertificate birthCertificate = restTemplate.getForObject(
+                "http://localhost:8080/v1.0/dnrn/cidadao/" + id,
+                BirthCertificate.class);
+        return birthCertificate;
+    }
+
 }

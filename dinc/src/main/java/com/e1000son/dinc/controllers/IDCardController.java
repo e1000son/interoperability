@@ -4,6 +4,7 @@ import com.e1000son.dinc.integration.IDNICRestClient;
 import com.e1000son.dinc.integration.IRestClientDNRN;
 import com.e1000son.dinc.integration.dto.BirthCertificate;
 import com.e1000son.dinc.integration.dto.CertificateFromDNRN;
+import com.e1000son.dinc.util.PDFGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -16,6 +17,8 @@ public class IDCardController {
     IDNICRestClient dnicRestClient;
     @Autowired
     IRestClientDNRN restClientDNRN;
+    @Autowired
+    PDFGenerator pdfGenerator;
 
     @RequestMapping("/showFindCitizen")
     public String showFindCitizen(){return "/citizen/findCitizen";}
@@ -35,5 +38,22 @@ public class IDCardController {
         CertificateFromDNRN certificateFromDNRN = restClientDNRN.findCitizenDNRN(nuic);
         modelMap.addAttribute("certificate",certificateFromDNRN);
         return "dnrn/citizenDetails";
+    }
+    @RequestMapping("/generateIdCard")
+    public String generateIdCard(@RequestParam("certificateId") Long certificateId,
+                                 @RequestParam("placeEmission") String placeEmission,
+                                 @RequestParam("maritalStatus") String maritalStatus,
+                                 ModelMap modelMap){
+
+        BirthCertificate birthCertificate = dnicRestClient.findCitizenById(certificateId);
+
+        pdfGenerator.generatePDF(birthCertificate,
+                "/Users/e1000son/Desktop/bilhetes/bi" + birthCertificate.getId() + ".pdf");
+        modelMap.addAttribute("msg",
+                "BI do cidadão " + birthCertificate.getCitizen().getFirstName() + " " +
+                        birthCertificate.getCitizen().getLastName() +
+                        " gerado com sucesso.");
+
+        return "/citizen/idConfirmation";
     }
 }
