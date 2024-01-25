@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Detalhes do cidadão</title>
+</head>
+<body>
+<h2>Detalhes do cidadão</h2>
+
+Nome: <span th:text="${certificate.Name}"/> <br/>
+NUIC: <span th:text="${certificate.NUIC}"/> <br/>
+
+<form action="completeCheckin" method="post"/>
+    <pre>
+
+    <h2>Dados do Bilhete de Identidade</h2>
+    Local de emissão: <input type="text" name="numberOfBags"/>
+
+    <input type="hidden" name="certificateId" th:value="${certificate.id}"/>
+    <input type="submit" value="Gerar Bilhete de Identidade"/>
+    </pre>
+</form>
+</body>
+</html>
