@@ -4,4 +4,5 @@ import com.e1000son.dinc.integration.dto.BirthCertificate;
 
 public interface IDNICRestClient {
     public BirthCertificate findCitizen(String nuic);
+    public BirthCertificate findCitizenById(Long id);
 }
