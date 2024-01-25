@@ -67,5 +67,5 @@ Generated reports can be found in target/site/jacoco directory.
 
 # Contributors
 
-Emilson Vontade
-Dinis Lote
+- Emilson Vontade
+- Dinis Lote
