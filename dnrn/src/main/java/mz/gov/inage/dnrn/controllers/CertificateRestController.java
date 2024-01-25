@@ -16,4 +16,9 @@ public class CertificateRestController {
     public BirthCertificate getBirthCertifcate(@PathVariable("nuic") String nuic){
         return certificateRepository.findCertificateByNuic(nuic);
     }
+
+    @RequestMapping("/cidadao/{id}")
+    public BirthCertificate getBirthCertifcateById(@PathVariable("id") Long id){
+        return certificateRepository.findById(id).get();
+    }
 }
